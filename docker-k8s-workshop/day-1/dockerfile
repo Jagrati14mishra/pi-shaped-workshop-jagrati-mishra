@@ -1,0 +1,16 @@
+FROM python:alpine
+
+# Set working directory
+WORKDIR /app
+
+# Copy app files
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY app.py .
+
+# Expose port 8080
+EXPOSE 8080
+
+# Run the app
+CMD ["python", "app.py"]
