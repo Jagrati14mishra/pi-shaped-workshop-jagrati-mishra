@@ -2,17 +2,17 @@
 Screenshot or log of Docker image being pushed
 ![image](https://github.com/user-attachments/assets/118ea481-3792-410f-bed1-0bf66370daaa)
 
-Why is Docker useful in building and deploying microservices for a real-world product (like an e-commerce or banking app)?
+## Why is Docker useful in building and deploying microservices for a real-world product (like an e-commerce or banking app)?
 Isolation: Each microservice runs in its own container, with its own dependencies, ensuring no conflicts.
 Portability: Docker containers can run on any system that supports Docker, making it easy to move workloads across environments.
 Fast Deployment: Containers start quickly and are lightweight, which reduces time to deploy updates or scale services.
 Microservice Architecture: For real-world applications like e-commerce or banking, where different components (e.g., payment, user auth, product catalog) need to work independently but communicate with each other, Docker makes it easy to develop, update, and deploy them independently.
 
-What is the difference between a Docker image and a container in the context of scaling a web application?
+## What is the difference between a Docker image and a container in the context of scaling a web application?
 A Docker image is a read-only blueprint that contains the application code, runtime, libraries, and environment needed to run an application. Think of it as a snapshot or template.
 A Docker container is a running instance of that image. It is the actual execution of the code described in the image.
 
-How does Kubernetes complement Docker when running a product at scale (e.g., hundreds of containers)?
+## How does Kubernetes complement Docker when running a product at scale (e.g., hundreds of containers)?
 Kubernetes complements Docker by providing orchestration features that are critical when managing containers at scale:
 Automated Deployment and Scaling: Kubernetes can automatically scale the number of containers based on CPU usage or other metrics.
 Rolling Updates and Rollbacks: You can update your application without downtime and revert changes if something goes wrong.
