@@ -11,6 +11,7 @@ Microservice Architecture: For real-world applications like e-commerce or bankin
 ## What is the difference between a Docker image and a container in the context of scaling a web application?
 A Docker image is a read-only blueprint that contains the application code, runtime, libraries, and environment needed to run an application. Think of it as a snapshot or template.
 A Docker container is a running instance of that image. It is the actual execution of the code described in the image.
+In the context of scaling, You build one image and use it to spin up multiple containers to handle increased traffic, for example, if a web app is experiencing high load, you can deploy 10 containers from the same image to balance the traffic and ensure availability.
 
 ## How does Kubernetes complement Docker when running a product at scale (e.g., hundreds of containers)?
 Kubernetes complements Docker by providing orchestration features that are critical when managing containers at scale:
