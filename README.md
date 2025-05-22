@@ -1,3 +1,4 @@
+## DAY-2
 ## Explanation in README.md about affinity rules applied
 By using requiredDuringSchedulingIgnoredDuringExecution, which means:
 a). The pod must be scheduled on a node that matches the condition.
