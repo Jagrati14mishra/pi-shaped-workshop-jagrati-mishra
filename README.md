@@ -45,3 +45,19 @@ Performance tuning: Assign latency-sensitive workloads to high-performance nodes
 ## Screenshot or logs showing the running pod and node placement
 ![image](https://github.com/user-attachments/assets/ec8a39e9-6d1e-4750-b176-a6f9e5594c8e)
 
+## DAY-3
+## How would you expose an internal microservice (e.g., user-auth) differently than a public-facing frontend in a Kubernetes-based product?
+Internal microservices (like user-auth) are usually not exposed to the internet directly, in place of this they:
+Use ClusterIP services so they are only reachable within the cluster.
+## Why might a product use Ingress instead of directly exposing each microservice via LoadBalancer?
+Using Ingress instead of multiple LoadBalancers supports:
+Cost Efficiency: Cloud providers charge for each LoadBalancer service.
+Ingress uses one LoadBalancer to expose multiple services, saving cost.
+TLS/HTTPS Termination:
+Ingress can handle SSL/TLS certificates, enabling secure connections to all services.
+
+## Screenshot of working endpoint via Ingress (use Minikube ingress if on local)
+![image](https://github.com/user-attachments/assets/26f13029-b367-4818-95a5-ec433f74acf7)
+
+
+
