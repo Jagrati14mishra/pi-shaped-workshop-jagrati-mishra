@@ -67,7 +67,7 @@ Ingress can handle SSL/TLS certificates, enabling secure connections to all serv
 Helm let us define reusable templates and use different values.yaml files for each environment (dev, staging, prod). In short, instead of maintaining multiple yaml files for each environment, Helm allow us to create one chart and use different values-*.yaml files for each environment.
 In real-world scenarios, different environments often require different configurations like, change replica count, image tag, resource limits etc. 
 ## How does Helm simplify deployment rollback during a production incident?
-Helm keeps a history of all releases. If a deployment fails, we can quickly roll back to a previous stable version by simple command 'helm rollback <release-name>'. This makes incident recovery faster and safer.
+Helm keeps a history of all releases. If a deployment fails, we can quickly roll back to a previous stable version by simple command helm rollback 'release-name'. This makes incident recovery faster and safer.
 
 
 
