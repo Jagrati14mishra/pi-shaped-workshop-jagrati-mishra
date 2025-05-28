@@ -45,3 +45,30 @@ Performance tuning: Assign latency-sensitive workloads to high-performance nodes
 ## Screenshot or logs showing the running pod and node placement
 ![image](https://github.com/user-attachments/assets/ec8a39e9-6d1e-4750-b176-a6f9e5594c8e)
 
+## DAY-3
+## How would you expose an internal microservice (e.g., user-auth) differently than a public-facing frontend in a Kubernetes-based product?
+Internal microservices (like user-auth) are usually not exposed to the internet directly, in place of this they:
+Use ClusterIP services so they are only reachable within the cluster.
+## Why might a product use Ingress instead of directly exposing each microservice via LoadBalancer?
+Using Ingress instead of multiple LoadBalancers supports:
+Cost Efficiency: Cloud providers charge for each LoadBalancer service.
+Ingress uses one LoadBalancer to expose multiple services, saving cost.
+TLS/HTTPS Termination:
+Ingress can handle SSL/TLS certificates, enabling secure connections to all services.
+
+## Screenshot of working endpoint via Ingress (use Minikube ingress if on local)
+![image](https://github.com/user-attachments/assets/26f13029-b367-4818-95a5-ec433f74acf7)
+
+## DAY-4 
+## Screenshot of Helm install and upgrade commands
+![image](https://github.com/user-attachments/assets/52ea2858-e159-45bb-8149-8c8198759a61)
+![image](https://github.com/user-attachments/assets/a5de6661-54ed-4dbc-bf9c-f745afcf3d49)
+## Why is Helm important for managing configuration across different environments in a real-world product (e.g., dev, staging, prod)?
+Helm let us define reusable templates and use different values.yaml files for each environment (dev, staging, prod). In short, instead of maintaining multiple yaml files for each environment, Helm allow us to create one chart and use different values-*.yaml files for each environment.
+In real-world scenarios, different environments often require different configurations like, change replica count, image tag, resource limits etc. 
+## How does Helm simplify deployment rollback during a production incident?
+Helm keeps a history of all releases. If a deployment fails, we can quickly roll back to a previous stable version by simple command helm rollback 'release-name'. This makes incident recovery faster and safer.
+
+
+
+
