@@ -1,0 +1,22 @@
+frontend:
+  image:
+    repository: jagratimishra1415/frontend-app
+    tag: latest
+  service:
+    port: 80
+
+backend:
+  image:
+    repository: jagratimishra1415/backend-app
+    tag: latest
+  service:
+    port: 8080
+
+serviceAccount:
+  create: false
+  name: ""
+  annotations: {}
+
+
+
+
