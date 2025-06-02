@@ -69,6 +69,21 @@ In real-world scenarios, different environments often require different configur
 ## How does Helm simplify deployment rollback during a production incident?
 Helm keeps a history of all releases. If a deployment fails, we can quickly roll back to a previous stable version by simple command helm rollback 'release-name'. This makes incident recovery faster and safer.
 
+## DAY-5
+## Screenshot of scaling event (use kubectl top pods)
+![image](https://github.com/user-attachments/assets/c9f1fece-46a1-4fbf-8270-b539827a74be)
+
+## Why are liveness and readiness probes critical in keeping a product’s user experience stable and reliable?
+
+Liveness Probe: Checks if the application is still running. If it fails, Kubernetes restarts the pod. This prevents issues like the app hanging due to memory leaks or deadlocks.
+Readiness Probe: Checks if the application is ready to accept traffic.
+
+## How does HPA help in handling flash sales, seasonal load spikes, or traffic surges in real-world applications like an e-commerce platform?
+
+During flash sales or traffic surges,HPA automatically increases the number of pods to meet the increased demand and ensure the fast response time.
+In real-world scenarios like e-commerce, HPA maintains availability and performance during events like Black Friday, Diwali or Christmas sales.
+
+
 
 
 
